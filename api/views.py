@@ -1,7 +1,9 @@
-from polls.models import Poll
-from rest_framework import mixins, viewsets
+from django.shortcuts import get_object_or_404
+from polls.models import Choice, Poll
+from rest_framework import mixins, status, viewsets
+from rest_framework.response import Response
 
-from .serializers import PollListPageSerializer
+from .serializers import PollListPageSerializer, VoteSerializer
 
 
 class CreatePollViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
@@ -15,7 +17,21 @@ class PollViewSet(
     mixins.UpdateModelMixin,
     viewsets.GenericViewSet):
 
-    pass
+    queryset = Poll.objects.all()
+    serializer_class = PollListPageSerializer
+
+    def update(self, request, *args, **kwargs):
+        poll = get_object_or_404(Poll, pk=self.kwargs.get('pk'))
+        serializer = VoteSerializer(data=request.data)
+        if serializer.is_valid():
+            choice = get_object_or_404(
+                Choice,
+                pk=serializer.validated_data['choice_id'],
+                poll=poll)
+            choice.votes += 1
+            choice.save()
+            return Response('Ваш голос принят.')
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class GetResultViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):

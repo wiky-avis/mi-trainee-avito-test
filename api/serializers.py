@@ -2,6 +2,10 @@ from polls.models import Choice, Poll
 from rest_framework import serializers
 
 
+class VoteSerializer(serializers.Serializer):
+    choice_id = serializers.IntegerField()
+
+
 class ChoiceSerializer(serializers.ModelSerializer):
 
     class Meta:
