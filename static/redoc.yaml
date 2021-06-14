@@ -1,0 +1,200 @@
+openapi: 3.0.2
+info:
+  title: 'Polls API'
+  version: ''
+  description: |
+    запросы к API начинаются с `/api/v1/`
+    # Описание
+    Проект **Polls** это сервис для голосования. Например, для выбора самого популярного покемона.
+
+servers:
+  - url: /api/v1/
+
+tags:
+  - name: createPoll
+    description: Создать голосование
+  - name: poll
+    description: Проголосовать
+  - name: getResult
+    description: Результат голосования
+
+paths:
+  /createPoll/:
+    post:
+      tags:
+        - createPoll
+      description: |
+        создать голосование c вариантами ответов.
+        Права доступа: **Администратор.**
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/createPoll'
+      responses:
+        200:
+          description: 'Новое голосование'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/createPoll'
+        403:
+          description: Учетные данные не были предоставлены.
+  /poll/:
+    get:
+      tags:
+        - poll
+      description: |
+        Получить все голосования.
+        Права доступа: **Доступно всем.**
+      responses:
+        200:
+          description: Список голосований с пагинацией
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    count:
+                      type: number
+                    next:
+                      type: string
+                    previous:
+                      type: string
+                    results:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/poll'
+        404:
+          description: Не найден объект оценки
+  /poll/{pk}/:
+    parameters:
+      - name: pk
+        in: path
+        required: true
+        description: ID объекта для оценки
+        schema:
+          type: number
+    patch:
+      tags:
+        - poll
+      description: |
+        Проголосовать за конкретный вариант.
+        Права доступа: **Доступно всем.**
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/pollVote'
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/poll'
+          description: ''
+  /getResult/{pk}/:
+    parameters:
+      - name: pk
+        in: path
+        required: true
+        description: ID объекта для оценки
+        schema:
+          type: number
+    get:
+      tags:
+        - getResult
+      description: |
+        Получить результат по конкретному голосованию.
+        Права доступа: **Доступно всем.**
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getResult'
+          description: ''
+        404:
+          description: Не найден объект оценки
+
+components:
+  schemas:
+    createPoll:
+      title: Голосование
+      type: object
+      description: Создание голосования с вариантами выбора
+      required:
+          - title
+          - description
+          - choices
+      properties:
+        title:
+          type: string
+          title: Название голосования
+        description:
+          type: string
+          title: Описание голосования
+        choices:
+            type: array
+            $ref: '#/components/schemas/choisePoll'
+    poll:
+      title: Голосование
+      type: object
+      required:
+        - choice_id
+      properties:
+        id:
+          type: integer
+          title: ID  голосования
+        title:
+          type: string
+          title: Название голосования
+        description:
+          type: string
+          title: Описание  голосования
+        pub_date:
+          type: string
+          format: date-time
+          title: Дата публикации голосования
+    pollVote:
+      title: Голосование
+      type: object
+      required:
+        - choice_id
+      properties:
+        choice_id:
+          type: integer
+          title: ID варианта ответа
+    getResult:
+      title: Результат голосования
+      type: object
+      description: Детальная информация голосования
+      properties:
+        id:
+          type: integer
+          title: ID  голосования
+        title:
+          type: string
+          title: Название голосования
+        description:
+          type: string
+          title: Описание  голосования
+        pub_date:
+          type: string
+          format: date-time
+          title: Дата публикации голосования
+        choices:
+          type: array
+          $ref: '#/components/schemas/choisePoll'
+    choisePoll:
+      title: Варианты ответов
+      type: array
+      required:
+        - choice_text
+      items:
+        properties:
+          choice_text:
+            type: string
+            title: Вариант ответа

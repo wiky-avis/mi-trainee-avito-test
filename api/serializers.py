@@ -1,5 +1,6 @@
-from polls.models import Choice, Poll
 from rest_framework import serializers
+
+from polls.models import Choice, Poll
 
 
 class VoteSerializer(serializers.Serializer):
