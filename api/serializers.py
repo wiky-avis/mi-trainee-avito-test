@@ -27,3 +27,11 @@ class PollListPageSerializer(serializers.ModelSerializer):
             choice_dict['poll'] = poll
             Choice.objects.create(**choice_dict)
         return poll
+
+
+class ChoiceSerializerWithVotes(ChoiceSerializer):
+    votes = serializers.IntegerField(read_only=True)
+
+
+class PollResultPageSerializer(PollListPageSerializer):
+    choices = ChoiceSerializerWithVotes(many=True, read_only=True)

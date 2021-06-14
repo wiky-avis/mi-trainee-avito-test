@@ -3,7 +3,8 @@ from polls.models import Choice, Poll
 from rest_framework import mixins, status, viewsets
 from rest_framework.response import Response
 
-from .serializers import PollListPageSerializer, VoteSerializer
+from .serializers import (PollListPageSerializer, PollResultPageSerializer,
+                          VoteSerializer)
 
 
 class CreatePollViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
@@ -36,4 +37,5 @@ class PollViewSet(
 
 class GetResultViewSet(mixins.RetrieveModelMixin, viewsets.GenericViewSet):
 
-    pass
+    queryset = Poll.objects.all()
+    serializer_class = PollResultPageSerializer
