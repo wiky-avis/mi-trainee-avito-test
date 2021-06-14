@@ -1,39 +1,20 @@
-GET http://localhost:8000/api/v1/getResult/21/
-Content-Type: application/json
-
-###
-
 POST http://localhost:8000/api/v1/createPoll/
 Content-Type: application/json
 
 {
-    "title": "Какой покемон лучше 15",
-    "description": "Какой покемон лучше 15",
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
     "choices": [
         {
             "choice_text": "пичу"
         },
         {
-            "choice_text": "пичу 2"
+            "choice_text": "черманде"
         },
         {
-            "choice_text": "пичу 3"
+            "choice_text": "минью"
         }
     ]
 }
-
-###
-
-PATCH http://localhost:8000/api/v1/poll/21/
-Content-Type: application/json
-
-{
-    "choice_id": 27
-}
-
-###
-
-GET http://localhost:8000/api/v1/poll/
-Content-Type: application/json
 
 ###
