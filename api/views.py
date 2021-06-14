@@ -13,7 +13,7 @@ class CreatePollViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
 
     queryset = Poll.objects.all()
     serializer_class = PollListPageSerializer
-    permission_classes = [IsAdmin]
+    # permission_classes = [IsAdmin]
 
 
 class PollViewSet(
