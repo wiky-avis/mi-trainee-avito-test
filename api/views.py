@@ -4,7 +4,6 @@ from rest_framework.response import Response
 
 from polls.models import Choice, Poll
 
-from .permissions import IsAdmin
 from .serializers import (PollListPageSerializer, PollResultPageSerializer,
                           VoteSerializer)
 
@@ -13,7 +12,6 @@ class CreatePollViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
 
     queryset = Poll.objects.all()
     serializer_class = PollListPageSerializer
-    # permission_classes = [IsAdmin]
 
 
 class PollViewSet(
