@@ -1,7 +1,8 @@
-from django.test import TestCase
 from http import HTTPStatus
 
-from polls.models import Poll, Choice
+from django.test import TestCase
+
+from polls.models import Choice, Poll
 
 
 class PollsPagesTests(TestCase):
