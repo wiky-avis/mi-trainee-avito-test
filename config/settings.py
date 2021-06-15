@@ -42,10 +42,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+COVERAGE_DIR = os.path.join(BASE_DIR, 'htmlcov')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [TEMPLATES_DIR, COVERAGE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,7 +110,8 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.AllowAny'
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
 }
 
 

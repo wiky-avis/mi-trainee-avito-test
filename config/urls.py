@@ -10,4 +10,9 @@ urlpatterns = [
         TemplateView.as_view(template_name='redoc.html'),
         name='redoc'
     ),
+    path(
+        'coverage/',
+        TemplateView.as_view(template_name='index.html'),
+        name='coverage_total'
+    ),
 ]

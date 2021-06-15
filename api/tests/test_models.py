@@ -2,7 +2,7 @@ from django.test import TestCase
 from polls.models import Choice, Poll
 
 
-class PollModelTest(TestCase):
+class PollsModelTest(TestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -12,7 +12,7 @@ class PollModelTest(TestCase):
         )
 
     def test_poll_verbose_name(self):
-        poll = PollModelTest.poll
+        poll = PollsModelTest.poll
         field_verboses = {
             'title': 'Название голосования',
             'description': 'Описание голосования',
@@ -25,7 +25,8 @@ class PollModelTest(TestCase):
                     poll._meta.get_field(value).verbose_name, expected)
 
     def test_choice_verbose_name(self):
-        choice = Choice.objects.create(poll=PollModelTest.poll, choice_text='Пичу')
+        choice = Choice.objects.create(
+            poll=PollsModelTest.poll, choice_text='Пичу')
         field_verboses = {
             'choice_text': 'Вариант выбора',
             'votes': 'Голоса',
@@ -37,13 +38,13 @@ class PollModelTest(TestCase):
                     choice._meta.get_field(value).verbose_name, expected)
 
     def test_object_poll_name_is_title_and_choicep_name_is_choice_text(self):
-        poll_1 = Poll.objects.get(title=PollModelTest.poll.title)
+        poll_1 = Poll.objects.get(title=PollsModelTest.poll.title)
         poll_2 = Poll.objects.create(
             title='Лучший покемон 2', description='Выберите лучшего покемона')
         choice = Choice.objects.create(poll=poll_1, choice_text='Пичу')
 
         str_test = {
-            f'{PollModelTest.poll}': poll_1.title,
+            f'{PollsModelTest.poll}': poll_1.title,
             f'{poll_2}': poll_2.title,
             f'{choice}': choice.choice_text
         }
