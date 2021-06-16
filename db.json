@@ -1,0 +1,819 @@
+[36;1mOperations to perform:[0m
+[1m  Apply all migrations: [0madmin, auth, contenttypes, polls, sessions
+[36;1mRunning migrations:[0m
+  No migrations to apply.
+[0m
+0 static files copied to '/usr/src/app/static', 161 unmodified.
+[0m[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Голосование",
+    "content_type": 7,
+    "codename": "add_poll"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Голосование",
+    "content_type": 7,
+    "codename": "change_poll"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Голосование",
+    "content_type": 7,
+    "codename": "delete_poll"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Голосование",
+    "content_type": 7,
+    "codename": "view_poll"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add choice",
+    "content_type": 8,
+    "codename": "add_choice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change choice",
+    "content_type": 8,
+    "codename": "change_choice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete choice",
+    "content_type": 8,
+    "codename": "delete_choice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view choice",
+    "content_type": 8,
+    "codename": "view_choice"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$OvcBXRj8TlgRhks6j77uyO$x5bC6z6pHXPj7VZ1+GWPWitH8+GQ+VYjfX7i/FIwyps=",
+    "last_login": "2021-06-16T13:40:37.442Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-06-16T13:40:19.044Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "polls",
+    "model": "poll"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "polls",
+    "model": "choice"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k2oig42tj260ltndg3sfdw63fggezo7e",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCByoBL956BzDCMVA1NSrsy3l2bdKHb_977L5VwXWpae5nTyOqsjDr8boT5UdoG-I7tNuk8tWUeSW-K3mnX14nL87K7fwcVe_3WAPbIjFai5yEGS-DIu5PNYCAIS_AZhSM6cIUMM4uBwUowgSkQFPX-AOhwOH4:1ltVmX:PEAInLoDzVSHbbMtgFLoLQCMZfrFEd4u9pc0Qg3rwNM",
+    "expire_date": "2021-06-30T13:40:37.445Z"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 1,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 34,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 35,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 36,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 37,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 38,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 39,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 40,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 41,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 42,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 43,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.poll",
+  "pk": 44,
+  "fields": {
+    "title": "Какой покемон лучше?",
+    "description": "Выберите лучшего покемона",
+    "pub_date": "2021-06-16"
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 1,
+  "fields": {
+    "poll": 1,
+    "choice_text": "пичу",
+    "votes": 3
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 2,
+  "fields": {
+    "poll": 1,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 3,
+  "fields": {
+    "poll": 1,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 34,
+  "fields": {
+    "poll": 34,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 35,
+  "fields": {
+    "poll": 34,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 36,
+  "fields": {
+    "poll": 34,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 37,
+  "fields": {
+    "poll": 35,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 38,
+  "fields": {
+    "poll": 35,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 39,
+  "fields": {
+    "poll": 35,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 40,
+  "fields": {
+    "poll": 36,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 41,
+  "fields": {
+    "poll": 36,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 42,
+  "fields": {
+    "poll": 36,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 43,
+  "fields": {
+    "poll": 37,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 44,
+  "fields": {
+    "poll": 37,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 45,
+  "fields": {
+    "poll": 37,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 46,
+  "fields": {
+    "poll": 38,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 47,
+  "fields": {
+    "poll": 38,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 48,
+  "fields": {
+    "poll": 38,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 49,
+  "fields": {
+    "poll": 39,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 50,
+  "fields": {
+    "poll": 39,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 51,
+  "fields": {
+    "poll": 39,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 52,
+  "fields": {
+    "poll": 40,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 53,
+  "fields": {
+    "poll": 40,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 54,
+  "fields": {
+    "poll": 40,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 55,
+  "fields": {
+    "poll": 41,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 56,
+  "fields": {
+    "poll": 41,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 57,
+  "fields": {
+    "poll": 41,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 58,
+  "fields": {
+    "poll": 42,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 59,
+  "fields": {
+    "poll": 42,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 60,
+  "fields": {
+    "poll": 42,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 61,
+  "fields": {
+    "poll": 43,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 62,
+  "fields": {
+    "poll": 43,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 63,
+  "fields": {
+    "poll": 43,
+    "choice_text": "минью",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 64,
+  "fields": {
+    "poll": 44,
+    "choice_text": "пичу",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 65,
+  "fields": {
+    "poll": 44,
+    "choice_text": "черманде",
+    "votes": 0
+  }
+},
+{
+  "model": "polls.choice",
+  "pk": 66,
+  "fields": {
+    "poll": 44,
+    "choice_text": "минью",
+    "votes": 0
+  }
+}
+]
+[0m

@@ -25,6 +25,10 @@
 и воспользуйтесь документацией к API :smile:
 
 ### Дополнительные возможности
+- заполнить базу тестовыми данными
+    ```
+    docker-compose run --rm web python manage.py loaddata db.json
+    ```
 - создать суперпользователя
     ```
     docker-compose run --rm web python manage.py createsuperuser
