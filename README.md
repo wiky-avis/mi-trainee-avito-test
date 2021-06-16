@@ -31,7 +31,7 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 - зайдите на страницу http://localhost:8000/redoc/ 
 и воспользуйтесь документацией к API :smile:
 - зайдите на страницу http://localhost:8000/coverage/ 
-чтобы ознакомиться с отчетом coverage о процентном покрытии проекта тестами
+чтобы ознакомиться с оценкой тестового покрытия на проекте coverage
 - примеры запросов можно посмотреть в файле requests.http
 
 ### Дополнительные возможности
