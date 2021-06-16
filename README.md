@@ -43,3 +43,20 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
     ```
     docker-compose run --rm web python manage.py createsuperuser
     ```
+    
+### Список работ и порядок выполнения задания:
+- Создание и настройка проекта
+- Создание моделей
+- настройка отображения моделей в панели администратора
+- api для создания голосования с вариантами ответов
+- api для голосования за конкретный вариант
+- api для для просмотра результата по конкретному голосованию
+- документация к api
+- подключение базы PostgreSQL
+- tests.test_models
+- tests.test_urls
+- tests.test_views.py
+- coverage report
+- docker
+- db.json
+- README.md
