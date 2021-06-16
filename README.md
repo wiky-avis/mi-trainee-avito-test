@@ -1,6 +1,8 @@
 # mi-trainee-avito-test
 Тестовое задание для стажера в юнит Market Intelligence (Avito)
 
+## Стек: 
+Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, Unittest
 
 ### Описание
 Это REST API для сервиса для голосования. Например, для выбора самого популярного покемона.
@@ -24,6 +26,7 @@
 и воспользуйтесь документацией к API :smile:
 - зайдите на страницу http://localhost:8000/coverage/ 
 чтобы посмотреть отчет coverage
+- примеры запросов можно посмотреть в файле requests.http
 
 ### Дополнительные возможности
 - заполнить базу тестовыми данными
