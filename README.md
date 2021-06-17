@@ -30,18 +30,19 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 ### Использование
 - зайдите на страницу http://localhost:8000/redoc/ 
 и воспользуйтесь документацией к API :smile:
-- зайдите на страницу http://localhost:8000/coverage/ 
-чтобы ознакомиться с оценкой тестового покрытия на проекте coverage
 - примеры запросов можно посмотреть в файле requests.http
-
-### Дополнительные возможности
-- заполнить базу тестовыми данными
+- запуск тестов
     ```
-    docker-compose run --rm web python manage.py loaddata db.json
+    docker-compose run --rm web python manage.py test
     ```
+- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/
 - создать суперпользователя
     ```
     docker-compose run --rm web python manage.py createsuperuser
+    ```
+- заполнить базу тестовыми данными
+    ```
+    docker-compose run --rm web python manage.py loaddata db.json
     ```
     
 ### Список работ и порядок выполнения задания:
