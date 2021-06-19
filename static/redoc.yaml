@@ -69,9 +69,9 @@ paths:
                         $ref: '#/components/schemas/poll'
         404:
           description: Не найден объект оценки
-  /poll/{pk}/:
+  /poll/{id}/:
     parameters:
-      - name: pk
+      - name: id
         in: path
         required: true
         description: ID объекта для оценки
@@ -95,9 +95,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/poll'
           description: ''
-  /getResult/{pk}/:
+  /getResult/{id}/:
     parameters:
-      - name: pk
+      - name: id
         in: path
         required: true
         description: ID объекта для оценки
@@ -156,7 +156,7 @@ components:
           title: Описание  голосования
         pub_date:
           type: string
-          format: date-time
+          format: date
           title: Дата публикации голосования
     pollVote:
       title: Голосование
@@ -183,7 +183,7 @@ components:
           title: Описание  голосования
         pub_date:
           type: string
-          format: date-time
+          format: date
           title: Дата публикации голосования
         choices:
           type: array
