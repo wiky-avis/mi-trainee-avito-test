@@ -4,7 +4,7 @@
 ## Стек: 
 Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, Unittest
 
-### Описание
+### Описание:
 Это REST API сервиса для голосования. Например, для выбора самого популярного покемона.
 
 Реализован пользовательский функционал дающий возможность пользоваться приложением не посещая сайт:
@@ -13,38 +13,6 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 *	`PATCH /api/poll/<poll_id>/` Отдать свой голос за какой-либо вариант.
 *	`GET /api/getResult/<poll_id>/` Получить текущий результат голосования.
 
-### Установка
-- склонируйте проект с реппозитория GitHub
-    ```
-    git clone https://github.com/wiky-avis/mi-trainee-avito-test.git
-    ```
-- перейдите в директорию mi-trainee-avito-test/
-    ```
-    cd mi-trainee-avito-test/
-    ```
-- запустите docker-compose
-    ```
-    docker-compose up
-    ```
-
-### Использование
-- зайдите на страницу http://localhost:8000/redoc/ 
-и воспользуйтесь документацией к API :smile:
-- примеры запросов можно посмотреть в файле requests.http
-- запуск тестов
-    ```
-    docker-compose run --rm web python manage.py test
-    ```
-- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/
-- создать суперпользователя
-    ```
-    docker-compose run --rm web python manage.py createsuperuser
-    ```
-- заполнить базу тестовыми данными
-    ```
-    docker-compose run --rm web python manage.py loaddata db.json
-    ```
-    
 ### Список работ и порядок выполнения задания:
 1. Создание проекта:
 
@@ -80,5 +48,41 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 
 5. Написание README
 
+### Схема данных:
 
-<iframe width="768" height="432" src="https://miro.com/app/embed/o9J_l-JKAMc=/?pres=1&frameId=3074457360382815123" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+![GitHub Logo](/images/schema.jpg)
+
+### Установка:
+- склонируйте проект с реппозитория GitHub
+    ```
+    git clone https://github.com/wiky-avis/mi-trainee-avito-test.git
+    ```
+- перейдите в директорию mi-trainee-avito-test/
+    ```
+    cd mi-trainee-avito-test/
+    ```
+- запустите docker-compose
+    ```
+    docker-compose up
+    ```
+
+### Использование:
+- зайдите на страницу http://localhost:8000/redoc/ 
+и воспользуйтесь документацией к API :smile:
+- примеры запросов можно посмотреть в файле requests.http
+- запуск тестов
+    ```
+    docker-compose run --rm web python manage.py test
+    ```
+- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/
+- создать суперпользователя
+    ```
+    docker-compose run --rm web python manage.py createsuperuser
+    ```
+- заполнить базу тестовыми данными
+    ```
+    docker-compose run --rm web python manage.py loaddata db.json
+    ```
+    
+### Примеры запросов к API:
+Для формирования ответов и запросов будет использовано расширение для VS Code [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
