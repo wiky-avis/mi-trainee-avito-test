@@ -76,7 +76,7 @@ class PollsPagesTests(TestCase):
     def test_poll_patch_current_vote(self):
         response = self.client.patch(
             f'/api/v1/poll/{PollsPagesTests.poll.id}/',
-            data={"choice_id": 1},
+            data={"choice_id": 3},
             content_type='application/json')
 
         self.assertEqual(response.status_code, HTTPStatus.OK)

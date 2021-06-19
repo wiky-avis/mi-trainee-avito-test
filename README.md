@@ -50,39 +50,45 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 
 ### Схема данных:
 
-![GitHub Logo](/images/schema.jpg)
+![GitHub Logo](/images_for_git/schema.jpg)
 
 ### Установка:
-- склонируйте проект с реппозитория GitHub
+- Склонируйте проект с реппозитория GitHub
     ```
     git clone https://github.com/wiky-avis/mi-trainee-avito-test.git
     ```
-- перейдите в директорию mi-trainee-avito-test/
+- Перейдите в директорию mi-trainee-avito-test/
     ```
     cd mi-trainee-avito-test/
     ```
-- запустите docker-compose
+- Запустите docker-compose
     ```
     docker-compose up
     ```
 
 ### Использование:
-- зайдите на страницу http://localhost:8000/redoc/ 
-и воспользуйтесь документацией к API :smile:
-- примеры запросов можно посмотреть в файле requests.http
-- запуск тестов
+- Документация к API http://localhost:8000/redoc/ 
+- Запуск тестов
     ```
     docker-compose run --rm web python manage.py test
     ```
-- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/
-- создать суперпользователя
+- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/ :smile:
+- Создать суперпользователя
     ```
     docker-compose run --rm web python manage.py createsuperuser
     ```
-- заполнить базу тестовыми данными
+- Заполнить базу тестовыми данными
     ```
     docker-compose run --rm web python manage.py loaddata db.json
     ```
     
 ### Примеры запросов к API:
 Для формирования ответов и запросов будет использовано расширение для VS Code [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
+
+![GitHub Logo](/images_for_git/create_poll.jpg)
+
+![GitHub Logo](/images_for_git/polls_all.jpg)
+
+![GitHub Logo](/images_for_git/vote.jpg)
+
+![GitHub Logo](/images_for_git/get_result.jpg)

@@ -23,7 +23,7 @@ PATCH http://localhost:8000/api/v1/poll/1/
 Content-Type: application/json
 
 {
-    "choice_id": 1
+    "choice_id": 2
 }
 
 ###
