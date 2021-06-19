@@ -79,3 +79,6 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
     - Настройка docker
 
 5. Написание README
+
+
+<iframe width="768" height="432" src="https://miro.com/app/embed/o9J_l-JKAMc=/?pres=1&frameId=3074457360382815123" frameBorder="0" scrolling="no" allowFullScreen></iframe>
