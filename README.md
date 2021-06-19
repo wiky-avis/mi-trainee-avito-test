@@ -87,16 +87,20 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 
 ### Создаем голосование с тремя вариантами ответов:
 Отправляем POST-запрос на адрес http://localhost:8000/api/v1/createPoll/.
+
 ![GitHub Logo](/images_for_git/create_poll.jpg)
 
 ### Запрашиваем список доступных голосований:
 Отправляем GET-запрос на адрес http://localhost:8000/api/v1/poll/.
+
 ![GitHub Logo](/images_for_git/polls_all.jpg)
 
-### Отдаем свой голос за вариант ответа с id 2 в голосовании с id 1:
+### Отдаем свой голос за вариант ответа у которого id 2 в голосовании у которого id 1:
 Отправляем PATCH-запрос на адрес http://localhost:8000/api/v1/poll/1/.
+
 ![GitHub Logo](/images_for_git/vote.jpg)
 
-### Запрашиваем результат голосования с id 1:
-Отправляем PATCH-запрос на адрес http://localhost:8000/api/v1/getResult/1/.
+### Запрашиваем результат голосования у которого id 1:
+Отправляем GET-запрос на адрес http://localhost:8000/api/v1/getResult/1/.
+
 ![GitHub Logo](/images_for_git/get_result.jpg)
