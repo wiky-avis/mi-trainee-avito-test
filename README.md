@@ -4,16 +4,16 @@
 ## Стек: 
 Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, Unittest
 
-### Описание:
+## Описание:
 Это REST API сервиса для голосования. Например, для выбора самого популярного покемона.
 
 Реализован пользовательский функционал дающий возможность пользоваться приложением не посещая сайт:
-*	`POST /api/createPoll/` Создавать новые голосования с вариантами ответов.
-*	`GET /api/poll/` Просматривать список доступных голосований. Натроена пагинация.
-*	`PATCH /api/poll/<poll_id>/` Отдать свой голос за какой-либо вариант.
-*	`GET /api/getResult/<poll_id>/` Получить текущий результат голосования.
+*	`POST /api/v1/createPoll/` Создавать новые голосования с вариантами ответов.
+*	`GET /api/v1/poll/` Просматривать список доступных голосований. Натроена пагинация.
+*	`PATCH /api/v1/poll/<poll_id>/` Отдать свой голос за какой-либо вариант.
+*	`GET /api/v1/getResult/<poll_id>/` Получить текущий результат голосования.
 
-### Список работ и порядок выполнения задания:
+## Список работ и порядок выполнения задания:
 1. Создание проекта:
 
     - Создание репозитория на GitHub и его клонирование на компьютер
@@ -48,11 +48,11 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 
 5. Написание README
 
-### Схема данных:
+## Схема данных:
 
 ![GitHub Logo](/images_for_git/schema.jpg)
 
-### Установка:
+## Установка:
 - Склонируйте проект с реппозитория GitHub
     ```
     git clone https://github.com/wiky-avis/mi-trainee-avito-test.git
@@ -66,7 +66,7 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
     docker-compose up
     ```
 
-### Использование:
+## Использование:
 - Документация к API http://localhost:8000/redoc/ 
 - Запуск тестов
     ```
@@ -82,13 +82,21 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
     docker-compose run --rm web python manage.py loaddata db.json
     ```
     
-### Примеры запросов к API:
+## Примеры запросов к API:
 Для формирования ответов и запросов будет использовано расширение для VS Code [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client).
 
+### Создаем голосование с тремя вариантами ответов:
+Отправляем POST-запрос на адрес http://localhost:8000/api/v1/createPoll/.
 ![GitHub Logo](/images_for_git/create_poll.jpg)
 
+### Запрашиваем список доступных голосований:
+Отправляем GET-запрос на адрес http://localhost:8000/api/v1/poll/.
 ![GitHub Logo](/images_for_git/polls_all.jpg)
 
+### Отдаем свой голос за вариант ответа с id 2 в голосовании с id 1:
+Отправляем PATCH-запрос на адрес http://localhost:8000/api/v1/poll/1/.
 ![GitHub Logo](/images_for_git/vote.jpg)
 
+### Запрашиваем результат голосования с id 1:
+Отправляем PATCH-запрос на адрес http://localhost:8000/api/v1/getResult/1/.
 ![GitHub Logo](/images_for_git/get_result.jpg)
