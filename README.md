@@ -1,5 +1,5 @@
 # mi-trainee-avito-test
-Тестовое задание для стажера в юнит Market Intelligence (Avito)
+Тестовое задание для стажера в юнит Market Intelligence [(Avito)](https://github.com/avito-tech/mi-trainee-task-2021)
 
 ## Стек: 
 Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, Unittest
