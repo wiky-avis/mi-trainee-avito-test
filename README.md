@@ -95,12 +95,12 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
 
 ![GitHub Logo](/images_for_git/polls_all.jpg)
 
-### Отдаем свой голос за вариант ответа у которого id 2 в голосовании у которого id 1:
+### Отдаем свой голос за вариант ответа у которого id 2 в голосовании c id 1:
 Отправляем PATCH-запрос на адрес http://localhost:8000/api/v1/poll/1/.
 
 ![GitHub Logo](/images_for_git/vote.jpg)
 
-### Запрашиваем результат голосования у которого id 1:
+### Запрашиваем результат голосования c id 1:
 Отправляем GET-запрос на адрес http://localhost:8000/api/v1/getResult/1/.
 
 ![GitHub Logo](/images_for_git/get_result.jpg)
