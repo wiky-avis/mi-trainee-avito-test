@@ -72,7 +72,7 @@ Python 3, Django 3, Django REST Framework, PostgreSQL, Docker, Gunicorn, Nginx, 
     ```
     docker-compose run --rm web python manage.py test
     ```
-- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/ :smile:
+- Отчет с оценкой тестового покрытия на проекте http://localhost:8000/coverage/
 - Создать суперпользователя
     ```
     docker-compose run --rm web python manage.py createsuperuser
